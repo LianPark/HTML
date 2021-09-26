@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>FlexBox 테스트 - 박스 반응형 #2</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+</head>
+
+<body>
+<!-- 스타일 시트 -->
+<style>
+*{
+	margin: 0;
+  padding: 0;
+}
+.wrap {
+  display: flex;
+}
+.box{
+  border:1px solid grey;
+  flex: 33%;
+  text-align: center;
+}
+span {
+  display: block;
+  text-align: center; 
+  margin:20px;
+}
+/* 미디어쿼리 */
+@media (max-width: 768px) {
+  .wrap {
+    flex-direction: column;
+    background-color: #f1f1f1;
+  }
+}
+</style>
+
+<!--
+  메인 내용
+-->
+<span class="span">breakpoint(768px) 지점에서 "flex-direction: column;" 의해 박스가 아래로 정렬됨.</span>
+<div id="wrap" class="wrap">
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+</div>
+
+</body>
+
+</html>
