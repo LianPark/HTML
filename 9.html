@@ -12,7 +12,7 @@
 <body>
 <!-- 스타일 시트 -->
 <style>
-html,body,*{
+*{
   margin: 0; padding: 0;
 }
 a:link, a:visited, a:hover {
@@ -20,7 +20,6 @@ a:link, a:visited, a:hover {
   color:black;
 }
 .container {
-  display: flex;
   border: 1px solid red;
 }
 .card-wrap { 
@@ -28,6 +27,7 @@ a:link, a:visited, a:hover {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  border: 3px solid green;
 }
 .card {
   display:flex;
@@ -35,28 +35,7 @@ a:link, a:visited, a:hover {
   border:1px solid black;
   padding: 50px 30px;
   margin: 0 10px;
-  max-width: 280px;
-}
-.card-icon{
-  text-align: center;
-  margin-bottom: 1rem;
-}
-.card-head{
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-.card-text{
-  text-align: center;
-}
-
-@media (max-width: 768px) {
-  .card {
-    max-width: 100%;
-  }
-  .card:nth-of-type(n+2){
-    margin-top:20px;
-  }  
+  max-width: 300px;
 }
 </style>
 
@@ -78,7 +57,7 @@ a:link, a:visited, a:hover {
     <div class="card">
       <i class="fas fa-camera fa-2x card-icon"></i>
       <h3 class="card-head">24 Hours Support</h3>
-      <div class="card-text">Support 24 hours / 7 days-a-week.  operates a 24 hour/7 day-a-week email & remote support services that is staffed to handle any issue or question for the systems that we develop or support. Handled directly by our knowledgeable staff ensuring a quick and accurate response</div>
+      <p class="card-text">Support 24 hours / 7 days-a-week.  operates a 24 hour/7 day-a-week email & remote support services that is staffed to handle any issue or question for the systems that we develop or support. Handled directly by our knowledgeable staff ensuring a quick and accurate response</p>
     </div>
   </div>
 </div>
