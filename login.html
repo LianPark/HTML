@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>FlexBox 테스트 - 로그인박스 만들기</title>
+</head>
+
+<body>
+<!-- 스타일 시트 -->
+<style>
+html,body{
+  margin: 0; padding: 0;
+}
+a:link, a:visited, a:hover {
+  text-decoration: none;
+  color:black;
+}
+.container {
+  display: flex;
+  height: 100vh;
+}
+.login-box { 
+  margin: auto;
+  width: 400px;
+  /* height: 300px; */
+  background-color: rgb(235, 232, 232);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  padding-top: 10px;
+  margin-top: 100px;
+}
+
+.text{
+  text-align: center;
+}
+.form-box{
+  display: flex;
+  flex-direction: column;
+}
+.form-box .frm_input{
+  margin: 5px 15px;
+  border: 1px solid #d0d3db;
+  padding: 10px;
+}
+.form-box .frm_submit{
+  margin: 5px 15px;
+  border: 1px solid #d0d3db;
+  padding: 10px;
+}
+.form-box .frm_submit:hover{
+  cursor: pointer;
+}
+.extra{
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 15px;
+  margin-top: 15px;
+}
+.find-a-pass{
+  padding: 5px;
+  border:1px solid grey;
+}
+</style>
+
+<!--
+  Flexbox을 이용한 로그인 화면 만들기
+-->
+<div class="container">
+  <div class="login-box">
+    <h1 class="text">Site Login</h1>
+    <form action="" method="post">
+      <div class="form-box">
+        <input type="text" name="username" id="" placeholder="username" class="frm_input">
+        <input type="text" name="password" id="" placeholder="password" class="frm_input">
+        <input type="submit" value="Click Me" class="frm_submit">
+        <div class="extra input">
+          <span>
+            <input type="checkbox" name="" id="auto_login">
+            <label for="auto_login">Autologin</label>
+          </span>
+          <div class="find-a-pass"><a href="http://www.google.com">Find a Password</a></div>
+        </div>    
+      </div>
+    </form>
+  </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>FlexBox 테스트 - 브라우저 화면 아래에 붙는 푸터</title>
+</head>
+
+<body>
+<!-- 스타일 시트 -->
+<style>
+html,body{
+  margin: 0; padding: 0;
+}
+.container {
+  display: flex;
+  background-color: lightblue;
+  flex-direction: column;
+  height: 100vh;
+  /* justify-content: space-between; */
+}
+.footer { 
+  margin-top: auto;
+  background-color: aquamarine;
+}
+
+</style>
+
+<!--
+  메인 내용
+-->
+<div class="container">
+  <div>푸터를 아래쪽에 붙이기</div>
+  <div class="footer">푸터영역</div>
+</div>
+
+</body>
+
+</html>

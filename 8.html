@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>FlexBox 테스트 - 카드박스 만들기</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.0/css/all.min.css">
+</head>
+
+<body>
+<!-- 스타일 시트 -->
+<style>
+html,body,*{
+  margin: 0; padding: 0;
+}
+a:link, a:visited, a:hover {
+  text-decoration: none;
+  color:black;
+}
+.container {
+  display: flex;
+  border: 1px solid red;
+}
+.card-box { 
+  background-color: rgb(232, 234, 235);
+  display: flex;
+}
+.card {
+  display:flex;
+  flex-direction: column;
+  border:1px solid black;
+  padding: 50px 30px;
+  margin: 0 10px;
+  min-width: 320px;
+}
+.card-icon{
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.card-head{
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.card-text{
+  text-align: center;
+}
+</style>
+
+<!--
+  Flexbox을 이용한 로그인 화면 만들기
+-->
+<div class="container">
+  <div class="card-box">
+    <div class="card">
+      <i class="fas fa-camera fa-2x card-icon"></i>
+      <h3 class="card-head">24 Hours Support</h3>
+      <p class="card-text">Support 24 hours / 7 days-a-week.  operates a 24 hour/7 day-a-week email & remote support services that is staffed to handle any issue or question for the systems that we develop or support. Handled directly by our knowledgeable staff ensuring a quick and accurate response</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-camera fa-2x card-icon"></i>
+      <h3 class="card-head">24 Hours Support</h3>
+      <p class="card-text">Support 24 hours / 7 days-a-week.  operates a 24 hour/7 day-a-week email & remote support services that is staffed to handle any issue or question for the systems that we develop or support. Handled directly by our knowledgeable staff ensuring a quick and accurate response</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-camera fa-2x card-icon"></i>
+      <h3 class="card-head">24 Hours Support</h3>
+      <div class="card-text">Support 24 hours / 7 days-a-week.  operates a 24 hour/7 day-a-week email & remote support services that is staffed to handle any issue or question for the systems that we develop or support. Handled directly by our knowledgeable staff ensuring a quick and accurate response</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
