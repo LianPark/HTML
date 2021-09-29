@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Tailwind css  carousel autoplay slider with arrow and indicators.</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+  </head>
+  <style>
+/* change the size of the bullet and active color */
+.swiper-pagination-bullet {
+        background-color: rgb(5, 155, 62);
+        display: inline-block;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+/* change color of next 2 bullets in sequence to white*/
+.swiper-pagination-bullet-active-next, .swiper-pagination-bullet-active-next-next {
+    background-color: red;
+}
+
+/* change color of previous bullet to white*/
+.swiper-pagination-bullet-active-prev {
+    background-color: red;
+}
+
+/* 화살표 컬러 조정*/
+.swiper-button-prev {
+    color: red; 
+}
+.swiper-button-next {
+    color: #000;
+}
+
+/* 화살표 크기 조정*/
+.swiper-button-prev::after {
+    font-size: 50px !important;
+    color: green; 
+}
+.swiper-button-next::after {
+    font-size: 50px !important;
+    color: green; 
+}
+  </style>
+
+  <body>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img
+            class="object-cover w-full h-96"
+            src="https://source.unsplash.com/user/erondu/3000x900"
+            alt="apple watch photo"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            class="object-cover w-full h-96"
+            src="https://source.unsplash.com/collection/190727/3000x900"
+            alt="apple watch photo"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            class="object-cover w-full h-96"
+            src="https://source.unsplash.com/collection/190728/3000x900"
+            alt="apple watch photo"
+          />
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper('.mySwiper', {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 3500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    </script>
+
+<h5 style="text-align: center; padding-top:50px;">
+  <p>Tailwind CSS carousel autoplay slider with arrow and indicators.</p>
+  <p>참조: <a href="https://larainfo.com/blogs/tailwind-css-carousel-slider-examples">https://larainfo.com/blogs/tailwind-css-carousel-slider-examples</a></p>
+  <p>&nbsp;</p>
+  <p><a href="https://medium.com/@networkaaron/swiper-relocating-previous-and-next-buttons-1ae792f22ef">Swiper — Relocating Previous and Next Buttons</a></p>
+  <p><a href="https://codepen.io/aaronkahlhamer/pen/oeVQxQ">Relocating Previous and Next Buttons</a></p>
+  <p><a href="https://codepen.io/ncer/pen/xpqemZ">Swiper custom pagination</a></p>
+  <p><a href="https://dev.to/timo_ernst/how-to-customize-prev-next-buttons-in-react-swiper-js-4lki">How to Customize Prev/Next Buttons in React SwiperJs</a></p>
+</h5>
+
+</body>
+</html>

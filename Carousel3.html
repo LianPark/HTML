@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Tailwind CSS vertical carousel slider with indicators.</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!--  Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="w-full h-full swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img
+            class="object-cover w-full h-full"
+            src="https://source.unsplash.com/user/erondu/3000x900"
+            alt="image"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            class="object-cover w-full h-full"
+            src="https://source.unsplash.com/collection/190727/3000x900"
+            alt="image"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            class="object-cover w-full h-full"
+            src="https://source.unsplash.com/collection/190728/3000x900"
+            alt="image"
+          />
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper('.mySwiper', {
+        direction: 'vertical',
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      });
+    </script>
+
+<h5 style="text-align: center; padding-top:50px;">
+  <p>Tailwind CSS vertical carousel slider with indicators.</p>
+  <p>참조: <a href="https://larainfo.com/blogs/tailwind-css-carousel-slider-examples">https://larainfo.com/blogs/tailwind-css-carousel-slider-examples</a></p>
+
+</h5>
+
+
+</body>
+</html>
