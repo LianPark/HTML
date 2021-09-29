@@ -12,30 +12,31 @@
 <body>
 <!-- 스타일 시트 -->
 <style>
-html,body,*{
-  margin: 0; padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 a:link, a:visited, a:hover {
   text-decoration: none;
   color:black;
 }
 .container {
-  display: flex;
   border: 1px solid red;
+  padding: 10px 0;
 }
 .card-wrap { 
-  background-color: rgb(232, 234, 235);
+  
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
 }
 .card {
   display:flex;
   flex-direction: column;
   border:1px solid black;
+  background-color: rgb(232, 234, 235);
   padding: 50px 30px;
   margin: 0 10px;
-  max-width: 280px;
+  flex: 30%
 }
 .card-icon{
   text-align: center;
@@ -49,10 +50,10 @@ a:link, a:visited, a:hover {
 .card-text{
   text-align: center;
 }
-
+/* 미디어쿼리 */
 @media (max-width: 768px) {
-  .card {
-    max-width: 100%;
+  .card-wrap { 
+    flex-direction: column;
   }
   .card:nth-of-type(n+2){
     margin-top:20px;
@@ -60,23 +61,24 @@ a:link, a:visited, a:hover {
 }
 </style>
 
+<h3 style="text-align: center; padding: 10px;">flex-direction: column;에 의한 카드박스의 아래 정렬</h3>
 <!--
   Flexbox을 이용한 로그인 화면 만들기
 -->
 <div class="container">
   <div class="card-wrap">
     <div class="card">
-      <i class="fas fa-camera fa-2x card-icon"></i>
+      <i class="fas fa-camera fa-3x card-icon"></i>
       <h3 class="card-head">24 Hours Support</h3>
       <p class="card-text">Support 24 hours / 7 days-a-week.  operates a 24 hour/7 day-a-week email & remote support services that is staffed to handle any issue or question for the systems that we develop or support. Handled directly by our knowledgeable staff ensuring a quick and accurate response</p>
     </div>
     <div class="card">
-      <i class="fas fa-camera fa-2x card-icon"></i>
+      <i class="fas fa-life-ring fa-3x card-icon"></i>
       <h3 class="card-head">24 Hours Support</h3>
       <p class="card-text">Support 24 hours / 7 days-a-week.  operates a 24 hour/7 day-a-week email & remote support services that is staffed to handle any issue or question for the systems that we develop or support. Handled directly by our knowledgeable staff ensuring a quick and accurate response</p>
     </div>
     <div class="card">
-      <i class="fas fa-camera fa-2x card-icon"></i>
+      <i class="fas fa-info fa-3x card-icon"></i>
       <h3 class="card-head">24 Hours Support</h3>
       <div class="card-text">Support 24 hours / 7 days-a-week.  operates a 24 hour/7 day-a-week email & remote support services that is staffed to handle any issue or question for the systems that we develop or support. Handled directly by our knowledgeable staff ensuring a quick and accurate response</div>
     </div>
