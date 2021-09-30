@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>FlexBox 테스트 - Footer 만들기</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.0/css/all.min.css" />
+  </head>
+
+  <body>
+    <!-- 스타일 시트 -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      a:link,
+      a:visited,
+      a:hover {
+        text-decoration: none;
+        color: black;
+      }
+      .container {
+      }
+      .footer-wrap {
+        display: flex;
+        flex-direction: row;
+        border: 1px solid green;
+      }
+      .box {
+        min-height: 100px;
+        flex-basis: 25%;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid red;
+        margin: 10px;
+      }
+      .item-warp {
+        padding-left: 20px;
+      }
+      h3 {
+        padding: 10px 0;
+        position: relative;
+      }
+      h3::after {
+        content: "";
+        position: absolute;
+        width: 70px;
+        height: 3px;
+        background: black;
+        bottom: 0px;
+        left: 0;
+      }
+
+      .links {
+        list-style-type: none;
+      }
+      .links > li {
+        padding: 5px 0;
+      }
+      .btn-link {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 10px;
+        border: 1px solid rgb(201, 199, 199);
+      }
+      .btn-link:hover {
+        background-color: rgb(190, 189, 189);
+      }
+      /* 미디어쿼리 */
+      @media (max-width: 768px) {
+        .footer-wrap {
+          flex-direction: column;
+        }
+      }
+    </style>
+
+    <!--
+  Footer 만들기
+-->
+    <div class="container">
+      <div class="footer-wrap">
+        <div class="box">
+          <div class="item-warp">
+            <h3>Sample Site Name</h3>
+            <div style="margin-top: 10px; margin-bottom: 20px">
+              <ul class="links">
+                <li>
+                  <a href=""><i class="fab fa-twitter fa-2x" style="padding: 10px"></i></a>
+                  <a href=""><i class="fab fa-facebook-f fa-2x" style="padding: 10px"></i></a>
+                  <a href=""><i class="fab fa-instagram fa-2x" style="padding: 10px"></i></a>
+                  <a href=""><i class="fas fa-rss fa-2x" style="padding: 10px"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="item-warp">
+            <h3>Useful Links</h3>
+            <div style="margin-top: 10px; margin-bottom: 20px">
+              <ul class="links">
+                <li>Knowledge Base</li>
+                <li>Contact Us</li>
+                <li>USDT Buy Credit Card</li>
+                <li>Terms & Conditions</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="item-warp">
+            <h3>Subscribe</h3>
+            <div style="margin-top: 10px; margin-bottom: 20px">
+              <p>Don’t miss our future updates! Get Subscribed now!</p>
+              <a href="" class="btn-link">Newsletter</a>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="item-warp">
+            <h3>Connect With Us</h3>
+            <div style="margin-top: 10px; margin-bottom: 20px">
+              <ul class="links">
+                <li><i class="fas fa-phone"></i> +852-6444543563</li>
+                <li><i class="fas fa-envelope"></i> sampletest@gmail.com</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

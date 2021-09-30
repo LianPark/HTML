@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>FlexBox 테스트 - 카드박스 만들기</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.0/css/all.min.css">
+</head>
+
+<body>
+<!-- 스타일 시트 -->
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+a:link, a:visited, a:hover {
+  text-decoration: none;
+  color:black;
+}
+.container {
+
+}
+.footer-wrap {  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+.copyright{
+  text-align: center;
+  padding: 20px 20px;
+}
+.imgcard{
+  margin: 20px 20px;
+}
+</style>
+
+<!--
+  Flexbox을 이용한 로그인 화면 만들기
+-->
+<div class="container">
+  <div class="footer-wrap">
+    <div class="copyright">
+      © 2021 IfoneUnlock All right reserved
+    </div>
+    <div class="creditcard">
+      <img src="https://ifoneunlock.com/templates/default/images/payment_logo.png" class="imgcard">
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
