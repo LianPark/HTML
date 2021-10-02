@@ -1,87 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>FlexBox 테스트 - 카드박스 만들기</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.0/css/all.min.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>FlexBox 테스트 - 카드박스 만들기</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.0/css/all.min.css">
-</head>
+  <body>
+    <!-- 스타일 시트 -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      a:link,
+      a:visited,
+      a:hover {
+        text-decoration: none;
+        color: black;
+      }
+      .container {
+        border: 1px solid red;
+        padding: 10px 0;
+      }
+      .card-wrap {
+        display: flex;
+        flex-direction: row;
+      }
+      .card {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid rgb(226, 226, 226);
+        margin: 0 10px;
+        flex: 30%;
+      }
+      .card-img {
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+      .card-head {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        padding: 0 20px;
+      }
+      .card-text {
+        padding: 0 20px;
+        padding-bottom: 40px;
+      }
+      img {
+        height: 300px;
+        width: 100%;
+        object-fit: fill;
+      }
+      /* 미디어쿼리 */
+      @media (max-width: 768px) {
+        .card-wrap {
+          flex-direction: column;
+        }
+        .card:nth-of-type(n + 2) {
+          margin-top: 20px;
+        }
+      }
+    </style>
 
-<body>
-<!-- 스타일 시트 -->
-<style>
-* {
-  margin: 0;
-  padding: 0;
-}
-a:link, a:visited, a:hover {
-  text-decoration: none;
-  color:black;
-}
-.container {
-  border: 1px solid red;
-  padding: 10px 0;
-}
-.card-wrap { 
-  display: flex;
-  flex-direction: row;
-}
-.card {
-  display:flex;
-  flex-direction: column;
-  border:1px solid rgb(226, 226, 226);
-  margin: 0 10px;
-  flex: 30%
-}
-.card-img{
-  text-align: center;
-  margin-bottom: 1rem;
-}
-.card-head{
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  padding: 0 20px;
-}
-.card-text{
-  padding: 0 20px;
-  padding-bottom: 40px;
-}
-/* 미디어쿼리 */
-@media (max-width: 768px) {
-  .card-wrap { 
-    flex-direction: column;
-  }
-  .card:nth-of-type(n+2){
-    margin-top:20px;
-  }  
-}
-</style>
-
-<h3 style="text-align: center; padding: 10px;">flex-direction: column;에 의한 카드박스의 아래 정렬</h3>
-<!--
+    <h3 style="text-align: center; padding: 10px">flex-direction: column;에 의한 카드박스의 아래 정렬</h3>
+    <!--
   Flexbox을 이용한 로그인 화면 만들기
 -->
-<div class="container">
-  <div class="card-wrap">
-    <div class="card">
-      <img src="https://picsum.photos/286/180" alt="" class="card-img">
-      <h3 class="card-head">Card Title</h3>
-      <p class="card-text">Support 24 hours / 7 days-a-week.  operates a 24 hour/7 day-a-week email & remote support services that is staffed to handle any issue or question for the systems that we develop or support. Handled directly by our knowledgeable staff ensuring a quick and accurate response</p>
+    <div class="container">
+      <div class="card-wrap">
+        <div class="card">
+          <img src="https://picsum.photos/286/180" alt="" class="card-img" />
+          <h3 class="card-head">Card Title</h3>
+          <p class="card-text">
+            Support 24 hours / 7 days-a-week. operates a 24 hour/7 day-a-week email & remote support services that is staffed to handle any issue or question for the systems that we develop or
+            support. Handled directly by our knowledgeable staff ensuring a quick and accurate response
+          </p>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/286/180" alt="" class="card-img" />
+          <h3 class="card-head">24 Hours Support</h3>
+          <p class="card-text">
+            Support 24 hours / 7 days-a-week. operates a 24 hour/7 day-a-week email & remote support services that is staffed to handle any issue or question for the systems that we develop or
+            support. Handled directly by our knowledgeable staff ensuring a quick and accurate response
+          </p>
+        </div>
+        <div class="card">
+          <img src="https://source.unsplash.com/random" alt="" class="card-img" />
+          <h3 class="card-head">24 Hours Support</h3>
+          <p class="card-text">
+            Support 24 hours / 7 days-a-week. operates a 24 hour/7 day-a-week email & remote support services that is staffed to handle any issue or question for the systems that we develop or
+            support. Handled directly by our knowledgeable staff ensuring a quick and accurate response
+          </p>
+        </div>
+      </div>
     </div>
-    <div class="card">
-      <img src="https://picsum.photos/286/180" alt="" class="card-img">
-      <h3 class="card-head">24 Hours Support</h3>
-      <p class="card-text">Support 24 hours / 7 days-a-week.  operates a 24 hour/7 day-a-week email & remote support services that is staffed to handle any issue or question for the systems that we develop or support. Handled directly by our knowledgeable staff ensuring a quick and accurate response</p>
-    </div>
-    <div class="card">
-      <img src="https://picsum.photos/286/180" alt="" class="card-img">
-      <h3 class="card-head">24 Hours Support</h3>
-      <p class="card-text">Support 24 hours / 7 days-a-week.  operates a 24 hour/7 day-a-week email & remote support services that is staffed to handle any issue or question for the systems that we develop or support. Handled directly by our knowledgeable staff ensuring a quick and accurate response</p>
-    </div>
-  </div>
-</div>
-
-</body>
+  </body>
 </html>
